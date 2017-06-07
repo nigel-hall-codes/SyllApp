@@ -8,18 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+// In order to use the camera you have to add { UIImagePickerControllerDelegate, UINavigationControllerDelegate}
+//    into viewController
+
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
+        }
     
     
     // Take Picture button
     @IBAction func takePicture(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+            
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = UIImagePickerControllerSourceType.camera;
+            picker.allowsEditing = false
+            self.present(picker, animated: false, completion: nil)
+        }
         
+       
     }
+    
+    
     
     // Image view
     @IBOutlet var image: UIImageView!

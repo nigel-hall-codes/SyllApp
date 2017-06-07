@@ -14,6 +14,8 @@
 		071FD8921EE62AF7000B119D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071FD8901EE62AF7000B119D /* LaunchScreen.storyboard */; };
 		071FD89D1EE62AF7000B119D /* SyllabusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071FD89C1EE62AF7000B119D /* SyllabusTests.swift */; };
 		071FD8A81EE62AF8000B119D /* SyllabusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071FD8A71EE62AF8000B119D /* SyllabusUITests.swift */; };
+		1BA797B61EE76A1700B03B53 /* ClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA797B51EE76A1700B03B53 /* ClassesViewController.swift */; };
+		1BA797B91EE76C5400B03B53 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA797B81EE76C5400B03B53 /* Classes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		071FD8A31EE62AF8000B119D /* SyllabusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SyllabusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		071FD8A71EE62AF8000B119D /* SyllabusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyllabusUITests.swift; sourceTree = "<group>"; };
 		071FD8A91EE62AF8000B119D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA797B51EE76A1700B03B53 /* ClassesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesViewController.swift; sourceTree = "<group>"; };
+		1BA797B81EE76C5400B03B53 /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +101,9 @@
 		071FD8861EE62AF7000B119D /* Syllabus */ = {
 			isa = PBXGroup;
 			children = (
+				1BA797B71EE76C3600B03B53 /* Models */,
 				071FD8871EE62AF7000B119D /* AppDelegate.swift */,
+				1BA797B51EE76A1700B03B53 /* ClassesViewController.swift */,
 				071FD8891EE62AF7000B119D /* ViewController.swift */,
 				071FD88B1EE62AF7000B119D /* Main.storyboard */,
 				071FD88E1EE62AF7000B119D /* Assets.xcassets */,
@@ -123,6 +129,14 @@
 				071FD8A91EE62AF8000B119D /* Info.plist */,
 			);
 			path = SyllabusUITests;
+			sourceTree = "<group>";
+		};
+		1BA797B71EE76C3600B03B53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1BA797B81EE76C5400B03B53 /* Classes.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +207,7 @@
 				TargetAttributes = {
 					071FD8831EE62AF7000B119D = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5P56CJTAU5;
 						ProvisioningStyle = Automatic;
 					};
 					071FD8971EE62AF7000B119D = {
@@ -260,6 +275,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				071FD88A1EE62AF7000B119D /* ViewController.swift in Sources */,
+				1BA797B61EE76A1700B03B53 /* ClassesViewController.swift in Sources */,
+				1BA797B91EE76C5400B03B53 /* Classes.swift in Sources */,
 				071FD8881EE62AF7000B119D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5P56CJTAU5;
 				INFOPLIST_FILE = Syllabus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = C.Lo.Syllabus;
@@ -424,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5P56CJTAU5;
 				INFOPLIST_FILE = Syllabus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = C.Lo.Syllabus;
@@ -505,6 +524,7 @@
 				071FD8AE1EE62AF8000B119D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		071FD8AF1EE62AF8000B119D /* Build configuration list for PBXNativeTarget "SyllabusTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +533,7 @@
 				071FD8B11EE62AF8000B119D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		071FD8B21EE62AF8000B119D /* Build configuration list for PBXNativeTarget "SyllabusUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +542,7 @@
 				071FD8B41EE62AF8000B119D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
