@@ -103,16 +103,17 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="ei4-8J-vOL" id="FIG-1b-2J2"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toDetail" id="kdJ-oN-bh7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAF-dA-Kvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1111.2" y="19.340329835082461"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Syllabus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DetailViewController" customModule="Syllabus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -121,29 +122,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tiu-bN-bjG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tiu-bN-bjG">
                                 <rect key="frame" x="110" y="477" width="155" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="PsO-Yp-3e9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Take Picture"/>
                                 <connections>
                                     <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8dJ-WE-9R9"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FoI-w8-XJG">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="389"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FoI-w8-XJG">
+                                <rect key="frame" x="0.0" y="68" width="375" height="321"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RI-2q-2SX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="PqU-tJ-boW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tiu-bN-bjG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="94" id="Du3-wz-kdO"/>
+                            <constraint firstItem="FoI-w8-XJG" firstAttribute="top" secondItem="8RI-2q-2SX" secondAttribute="bottom" id="MmY-Po-y7e"/>
+                            <constraint firstItem="FoI-w8-XJG" firstAttribute="trailing" secondItem="8RI-2q-2SX" secondAttribute="trailing" id="NuB-lv-I6U"/>
+                            <constraint firstItem="FoI-w8-XJG" firstAttribute="centerX" secondItem="Tiu-bN-bjG" secondAttribute="centerX" id="Of3-8b-Aji"/>
+                            <constraint firstItem="FoI-w8-XJG" firstAttribute="leading" secondItem="8RI-2q-2SX" secondAttribute="leading" id="U1c-6F-piQ"/>
+                            <constraint firstItem="8RI-2q-2SX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g84-gq-lsf"/>
+                            <constraint firstItem="8RI-2q-2SX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hSn-wA-wgK"/>
+                            <constraint firstAttribute="trailing" secondItem="8RI-2q-2SX" secondAttribute="trailing" id="l7K-tj-hYf"/>
+                            <constraint firstItem="Tiu-bN-bjG" firstAttribute="top" secondItem="FoI-w8-XJG" secondAttribute="bottom" constant="88" id="lNE-XZ-eCC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tiu-bN-bjG" secondAttribute="bottom" constant="134" id="tuQ-uC-RDy"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="classLabel" destination="8RI-2q-2SX" id="W1f-GD-R5B"/>
                         <outlet property="image" destination="FoI-w8-XJG" id="UYk-ZI-xIn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="-372" y="18.440779610194905"/>
         </scene>
     </scenes>
 </document>

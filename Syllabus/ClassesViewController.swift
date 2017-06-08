@@ -77,6 +77,7 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         
         // Do any additional setup after loading the view.
     }
@@ -103,6 +104,32 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    var valueToPass: String?
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        valueToPass = classes[indexPath[1]].name
+        
+        performSegue(withIdentifier: "toDetail", sender: nil)
+        print(valueToPass!)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    
+        
+        if (segue.identifier == "toDetail") {
+           
+            // initialize new view controller and cast it as your view controller
+            let viewController = segue.destination as! DetailViewController
+            // your new view controller should have property that will store passed value
+
+            viewController.className = valueToPass!
+            
+        }
+    }
+   
     
 
     override func didReceiveMemoryWarning() {
