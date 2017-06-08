@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 
 class classTableViewCell: UITableViewCell {
@@ -27,7 +28,10 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
 
     @IBOutlet weak var tableView: UITableView!
+    let realm = try? Realm()
     var classes: [Class] = []
+    
+    
     
     
     
@@ -46,6 +50,12 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
             print(self.classes[0].name)
             print(self.classes[0].description)
             print(self.classes.count)
+            
+            self.addClass(name: firstTextField.text!, desc: secondTextField.text!)
+            
+            
+            
+            
             
             
             self.tableView.reloadData()
@@ -71,7 +81,23 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
    
-    
+    func addClass(name: String, desc:String){
+        let actclass = theClass()
+        actclass.name = name
+        actclass.descriptions = desc
+        
+        do{
+            
+        
+        try self.realm?.write {
+            self.realm?.add(actclass)
+            print("Added \(name)" )
+        }
+        }catch{
+            print("problem adding to realm")
+        }
+
+    }
     
     
     override func viewDidLoad() {
@@ -82,20 +108,29 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Do any additional setup after loading the view.
     }
     
+    func getClasses() -> Results<theClass> {
+        let realm = try? Realm()
+        let allclasses = realm?.objects(theClass)
+        
+        return allclasses!
+    }
+    
     
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
-        return self.classes.count
+        return getClasses().count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let theclasses = getClasses()
+        print("Hello\(theclasses[1].name)")
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! classTableViewCell
-        let cl = self.classes[indexPath[1]]
+        let cl = theclasses[indexPath[1]]
         cell.classTableIViewLabel.text? = cl.name
-        cell.celldetailLabel.text? = cl.description
+        cell.celldetailLabel.text? = cl.descriptions
         
      
         
@@ -107,8 +142,9 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
     var valueToPass: String?
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        valueToPass = classes[indexPath[1]].name
+        let theClasses = getClasses()
+        
+        valueToPass = theClasses[indexPath[1]].name
         
         performSegue(withIdentifier: "toDetail", sender: nil)
         print(valueToPass!)
