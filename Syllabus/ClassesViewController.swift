@@ -21,15 +21,14 @@ class classTableViewCell: UITableViewCell {
 }
     
 
-
-
-
 class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 
     @IBOutlet weak var tableView: UITableView!
+    
+//    Database initialization
     let realm = try? Realm()
-    var classes: [Class] = []
+   
     
     
     
@@ -42,27 +41,20 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         let alertController = UIAlertController(title: "What class?", message: "Enter name and description:", preferredStyle: .alert)
         
         let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
-            let firstTextField = alertController.textFields![0] as UITextField
-            let secondTextField = alertController.textFields![1] as UITextField
-            self.classes.append(Class(name: firstTextField.text!, description:secondTextField.text!))
+            let name = alertController.textFields![0] as UITextField
+        let desc = alertController.textFields![1] as UITextField
             
-            print("button pressed")
-            print(self.classes[0].name)
-            print(self.classes[0].description)
-            print(self.classes.count)
+    
+        
+//            adds class to database
             
-            self.addClass(name: firstTextField.text!, desc: secondTextField.text!)
-            
-            
-            
-            
-            
-            
+            self.addClass(name: name.text!, desc: desc.text!)
+//        Reload the tableview
             self.tableView.reloadData()
             
         }
         
-        
+//        When alert is canceled blah blah
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
         
         alertController.addTextField { (textField : UITextField!) -> Void in
@@ -80,7 +72,7 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
 
-   
+//        Here is the addClass function
     func addClass(name: String, desc:String){
         let actclass = theClass()
         actclass.name = name
@@ -88,10 +80,11 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         do{
             
-        
+//         realm is the database framework for swift
+            
         try self.realm?.write {
             self.realm?.add(actclass)
-            print("Added \(name)" )
+           
         }
         }catch{
             print("problem adding to realm")
@@ -107,7 +100,8 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         // Do any additional setup after loading the view.
     }
-    
+//    This returns the all the classes from the database
+//    You can see whats in the database by going to RealmObjects.swift
     func getClasses() -> Results<theClass> {
         let realm = try? Realm()
         let allclasses = realm?.objects(theClass)
@@ -116,17 +110,17 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    
+//    Returns number of rows for the tableview
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       
         return getClasses().count
     }
     
-    
+//    For each row return the cell and its data
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let theclasses = getClasses()
-        print("Hello\(theclasses[1].name)")
+       
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! classTableViewCell
         let cl = theclasses[indexPath[1]]
         cell.classTableIViewLabel.text? = cl.name
@@ -138,27 +132,31 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
         
     }
-    
+//    This is what happens when you select a row
+//    Valuetopass is the data being sent between view Controllers
     var valueToPass: String?
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let theClasses = getClasses()
         
+//        valueToPass is the data aka "name of class" to pass through the segue into detailViewController
+        
         valueToPass = theClasses[indexPath[1]].name
         
         performSegue(withIdentifier: "toDetail", sender: nil)
+        
         print(valueToPass!)
     }
     
+//    This function is called before the actual segue to prepare the ViewControllers. Changes the global variable on detailViewController
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    
-        
         if (segue.identifier == "toDetail") {
            
             // initialize new view controller and cast it as your view controller
+            
             let viewController = segue.destination as! DetailViewController
+            
             // your new view controller should have property that will store passed value
 
             viewController.className = valueToPass!
