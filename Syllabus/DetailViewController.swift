@@ -11,7 +11,10 @@ import UIKit
 // In order to use the camera you have to add { UIImagePickerControllerDelegate, UINavigationControllerDelegate}
 //    into viewController
 
-class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBOutlet weak var UpcomingTableView: UITableView!
     
     @IBOutlet weak var classLabel: UILabel!
     var className: String = "Default"
@@ -19,6 +22,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        UpcomingTableView.dataSource = self
+        UpcomingTableView.delegate = self
         classLabel.text = className
         // Do any additional setup after loading the view, typically from a nib.
         }
@@ -38,10 +43,21 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
        
     }
     
+//    Tableview setup
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = "Assignment \(indexPath[1])      due \(indexPath[1]) days from now"
+        return cell
+    }
     
     
     // Image view
-    @IBOutlet var image: UIImageView!
+  
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
