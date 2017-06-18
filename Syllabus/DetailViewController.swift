@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import TesseractOCR
 
 // In order to use the camera you have to add { UIImagePickerControllerDelegate, UINavigationControllerDelegate}
 //    into viewController
 
 
-class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, G8TesseractDelegate{
     
     @IBOutlet weak var UpcomingTableView: UITableView!
     
@@ -30,18 +31,46 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     // Take Picture button
-    @IBAction func takePicture(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
-            
-            let picker = UIImagePickerController()
-            picker.delegate = self
-            picker.sourceType = UIImagePickerControllerSourceType.camera;
-            picker.allowsEditing = false
-            self.present(picker, animated: false, completion: nil)
+    @IBAction func cameraButton(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .camera
+        picker.allowsEditing = true
+        self.present(picker, animated: true, completion: nil)
+        
+        }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            analyzeImage(image: image)
         }
         
-       
+        self.dismiss(animated: true, completion: nil)
     }
+        
+//    Text Analysis
+    
+    func analyzeImage(image: UIImage) {
+        
+    
+        if let tesseract = G8Tesseract(language: "eng"){
+            tesseract.delegate = self
+            tesseract.image = image.g8_blackAndWhite()
+            tesseract.recognize()
+            print(tesseract.recognizedText)
+            
+            
+        }
+    }
+    
+    func progressImageRecognition(for tesseract: G8Tesseract!) {
+        print("Recognition Process \(tesseract.progress) %")
+        }
+
+        
+    
+    
     
 //    Tableview setup
     
@@ -56,7 +85,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     
-    // Image view
+   
   
     
     override func didReceiveMemoryWarning() {

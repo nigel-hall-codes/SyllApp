@@ -172,14 +172,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sn0-l0-IYw">
+                                <rect key="frame" x="160" y="562" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibn-T7-CmO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8RI-2q-2SX" secondAttribute="bottom" constant="580" id="2ip-EX-DTs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sn0-l0-IYw" secondAttribute="bottom" constant="75" id="GhY-3L-Mbe"/>
                             <constraint firstItem="D8A-rR-hq4" firstAttribute="top" secondItem="15f-O3-8Iy" secondAttribute="bottom" constant="62" id="Khl-0w-2Ai"/>
                             <constraint firstItem="D8A-rR-hq4" firstAttribute="centerX" secondItem="15f-O3-8Iy" secondAttribute="centerX" id="OxR-k4-1tt"/>
                             <constraint firstItem="8RI-2q-2SX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="T1u-W5-HtG"/>
                             <constraint firstItem="8RI-2q-2SX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="19" id="Txm-2P-ISI"/>
+                            <constraint firstItem="Sn0-l0-IYw" firstAttribute="centerX" secondItem="D8A-rR-hq4" secondAttribute="centerX" id="VOs-hx-mZL"/>
                             <constraint firstItem="IEP-vk-KRf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aKV-7x-7Vi"/>
                             <constraint firstItem="IEP-vk-KRf" firstAttribute="centerY" secondItem="8RI-2q-2SX" secondAttribute="centerY" id="diC-ww-65i"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D8A-rR-hq4" secondAttribute="bottom" constant="206" id="g3t-oL-FDH"/>

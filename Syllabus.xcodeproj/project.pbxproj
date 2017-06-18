@@ -21,8 +21,12 @@
 		1B35E4BC1EE9FBA200680846 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B35E4B61EE9FB7D00680846 /* RealmSwift.framework */; };
 		1B35E4BD1EE9FBA200680846 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B35E4B61EE9FB7D00680846 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1B35E4C01EE9FC8300680846 /* RealmObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B35E4BF1EE9FC8300680846 /* RealmObjects.swift */; };
+		1B98EC091EF6132600782433 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 1B98EC081EF6132600782433 /* tessdata */; };
 		1BA797B61EE76A1700B03B53 /* ClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA797B51EE76A1700B03B53 /* ClassesViewController.swift */; };
 		1BA797B91EE76C5400B03B53 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA797B81EE76C5400B03B53 /* Classes.swift */; };
+		5A2446D497E84CFC2A80C291 /* Pods_Syllabus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941B94F52A7D907EF5F8492B /* Pods_Syllabus.framework */; };
+		74A6A9E981D35DD58DBAC8D3 /* Pods_SyllabusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354FA4BB782FDE92150139E2 /* Pods_SyllabusTests.framework */; };
+		B8755F0E1056F5B7812C6840 /* Pods_SyllabusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC5E465571A437B6C219C41 /* Pods_SyllabusUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03DF9445A874F76C577FBFB8 /* Pods-Syllabus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Syllabus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Syllabus/Pods-Syllabus.release.xcconfig"; sourceTree = "<group>"; };
 		071FD8841EE62AF7000B119D /* Syllabus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Syllabus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071FD8871EE62AF7000B119D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		071FD8891EE62AF7000B119D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -71,11 +76,20 @@
 		071FD8A31EE62AF8000B119D /* SyllabusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SyllabusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		071FD8A71EE62AF8000B119D /* SyllabusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyllabusUITests.swift; sourceTree = "<group>"; };
 		071FD8A91EE62AF8000B119D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0BC5E465571A437B6C219C41 /* Pods_SyllabusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SyllabusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B35E4B51EE9FB7D00680846 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		1B35E4B61EE9FB7D00680846 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		1B35E4BF1EE9FC8300680846 /* RealmObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmObjects.swift; sourceTree = "<group>"; };
+		1B98EC081EF6132600782433 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		1BA797B51EE76A1700B03B53 /* ClassesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassesViewController.swift; sourceTree = "<group>"; };
 		1BA797B81EE76C5400B03B53 /* Classes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		354FA4BB782FDE92150139E2 /* Pods_SyllabusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SyllabusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BE3C12A6ADF091A82544D98 /* Pods-SyllabusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SyllabusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SyllabusUITests/Pods-SyllabusUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		74E76A50838E2F6A77853CA9 /* Pods-SyllabusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SyllabusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SyllabusTests/Pods-SyllabusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		766BF692D0F319876A25C706 /* Pods-Syllabus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Syllabus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Syllabus/Pods-Syllabus.debug.xcconfig"; sourceTree = "<group>"; };
+		941B94F52A7D907EF5F8492B /* Pods_Syllabus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Syllabus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA46F777B09567EF7C02F9E /* Pods-SyllabusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SyllabusUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SyllabusUITests/Pods-SyllabusUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D38112716B969632AF87BF48 /* Pods-SyllabusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SyllabusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SyllabusTests/Pods-SyllabusTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +101,7 @@
 				1B35E4B81EE9FB7E00680846 /* RealmSwift.framework in Frameworks */,
 				1B35E4BC1EE9FBA200680846 /* RealmSwift.framework in Frameworks */,
 				1B35E4B71EE9FB7D00680846 /* Realm.framework in Frameworks */,
+				5A2446D497E84CFC2A80C291 /* Pods_Syllabus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A6A9E981D35DD58DBAC8D3 /* Pods_SyllabusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8755F0E1056F5B7812C6840 /* Pods_SyllabusUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +131,8 @@
 				071FD89B1EE62AF7000B119D /* SyllabusTests */,
 				071FD8A61EE62AF8000B119D /* SyllabusUITests */,
 				071FD8851EE62AF7000B119D /* Products */,
+				BE33732B0E03A36075C7C430 /* Pods */,
+				D2F3C98027002B52DF6DE9F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +149,7 @@
 		071FD8861EE62AF7000B119D /* Syllabus */ = {
 			isa = PBXGroup;
 			children = (
+				1B98EC081EF6132600782433 /* tessdata */,
 				1BA797B71EE76C3600B03B53 /* Models */,
 				071FD8871EE62AF7000B119D /* AppDelegate.swift */,
 				1B35E4BF1EE9FC8300680846 /* RealmObjects.swift */,
@@ -171,6 +191,29 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		BE33732B0E03A36075C7C430 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				766BF692D0F319876A25C706 /* Pods-Syllabus.debug.xcconfig */,
+				03DF9445A874F76C577FBFB8 /* Pods-Syllabus.release.xcconfig */,
+				74E76A50838E2F6A77853CA9 /* Pods-SyllabusTests.debug.xcconfig */,
+				D38112716B969632AF87BF48 /* Pods-SyllabusTests.release.xcconfig */,
+				6BE3C12A6ADF091A82544D98 /* Pods-SyllabusUITests.debug.xcconfig */,
+				AEA46F777B09567EF7C02F9E /* Pods-SyllabusUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D2F3C98027002B52DF6DE9F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				941B94F52A7D907EF5F8492B /* Pods_Syllabus.framework */,
+				354FA4BB782FDE92150139E2 /* Pods_SyllabusTests.framework */,
+				0BC5E465571A437B6C219C41 /* Pods_SyllabusUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -178,11 +221,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 071FD8AC1EE62AF8000B119D /* Build configuration list for PBXNativeTarget "Syllabus" */;
 			buildPhases = (
+				60AB3F804B29495F00A6E53A /* [CP] Check Pods Manifest.lock */,
 				071FD8801EE62AF7000B119D /* Sources */,
 				071FD8811EE62AF7000B119D /* Frameworks */,
 				071FD8821EE62AF7000B119D /* Resources */,
 				1B35E4BB1EE9FB9E00680846 /* Embed Frameworks */,
 				1B35E4BE1EE9FBB800680846 /* ShellScript */,
+				8FC8A37D3710CC24199CB33E /* [CP] Embed Pods Frameworks */,
+				C9029558DAAD9689907EEB5C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,9 +243,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 071FD8AF1EE62AF8000B119D /* Build configuration list for PBXNativeTarget "SyllabusTests" */;
 			buildPhases = (
+				47B800E1D2B55527B18C1020 /* [CP] Check Pods Manifest.lock */,
 				071FD8941EE62AF7000B119D /* Sources */,
 				071FD8951EE62AF7000B119D /* Frameworks */,
 				071FD8961EE62AF7000B119D /* Resources */,
+				BF20718400F624DA41743259 /* [CP] Embed Pods Frameworks */,
+				5A036DAEACA484AE2E4D1C50 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 071FD8B21EE62AF8000B119D /* Build configuration list for PBXNativeTarget "SyllabusUITests" */;
 			buildPhases = (
+				2D96E760D5D9A5EBC19E2B11 /* [CP] Check Pods Manifest.lock */,
 				071FD89F1EE62AF7000B119D /* Sources */,
 				071FD8A01EE62AF7000B119D /* Frameworks */,
 				071FD8A11EE62AF7000B119D /* Resources */,
+				16465EE954FB0945B064EF16 /* [CP] Embed Pods Frameworks */,
+				A405E6A9097A47E7FF4EE641 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				071FD8921EE62AF7000B119D /* LaunchScreen.storyboard in Resources */,
+				1B98EC091EF6132600782433 /* tessdata in Resources */,
 				071FD88F1EE62AF7000B119D /* Assets.xcassets in Resources */,
 				071FD88D1EE62AF7000B119D /* Main.storyboard in Resources */,
 			);
@@ -304,6 +357,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16465EE954FB0945B064EF16 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SyllabusUITests/Pods-SyllabusUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1B35E4BE1EE9FBB800680846 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -316,6 +384,126 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"\n";
+		};
+		2D96E760D5D9A5EBC19E2B11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		47B800E1D2B55527B18C1020 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5A036DAEACA484AE2E4D1C50 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SyllabusTests/Pods-SyllabusTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60AB3F804B29495F00A6E53A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8FC8A37D3710CC24199CB33E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Syllabus/Pods-Syllabus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A405E6A9097A47E7FF4EE641 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SyllabusUITests/Pods-SyllabusUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF20718400F624DA41743259 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SyllabusTests/Pods-SyllabusTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9029558DAAD9689907EEB5C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Syllabus/Pods-Syllabus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -407,6 +595,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -457,6 +646,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -478,9 +668,11 @@
 		};
 		071FD8AD1EE62AF8000B119D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 766BF692D0F319876A25C706 /* Pods-Syllabus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5P56CJTAU5;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Syllabus",
@@ -495,9 +687,11 @@
 		};
 		071FD8AE1EE62AF8000B119D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03DF9445A874F76C577FBFB8 /* Pods-Syllabus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5P56CJTAU5;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Syllabus",
@@ -512,6 +706,7 @@
 		};
 		071FD8B01EE62AF8000B119D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74E76A50838E2F6A77853CA9 /* Pods-SyllabusTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -526,6 +721,7 @@
 		};
 		071FD8B11EE62AF8000B119D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D38112716B969632AF87BF48 /* Pods-SyllabusTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +736,7 @@
 		};
 		071FD8B31EE62AF8000B119D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BE3C12A6ADF091A82544D98 /* Pods-SyllabusUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = SyllabusUITests/Info.plist;
@@ -553,6 +750,7 @@
 		};
 		071FD8B41EE62AF8000B119D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEA46F777B09567EF7C02F9E /* Pods-SyllabusUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = SyllabusUITests/Info.plist;

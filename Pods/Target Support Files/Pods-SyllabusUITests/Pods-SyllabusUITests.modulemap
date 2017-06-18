@@ -1,0 +1,6 @@
+framework module Pods_SyllabusUITests {
+  umbrella header "Pods-SyllabusUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

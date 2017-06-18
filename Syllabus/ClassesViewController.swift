@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import TesseractOCR
 
 
 class classTableViewCell: UITableViewCell {
@@ -21,7 +22,7 @@ class classTableViewCell: UITableViewCell {
 }
     
 
-class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, G8TesseractDelegate {
     
 
     @IBOutlet weak var tableView: UITableView!
@@ -98,10 +99,15 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
         tableView.delegate = self
         
+        
+        
         // Do any additional setup after loading the view.
     }
 //    This returns the all the classes from the database
 //    You can see whats in the database by going to RealmObjects.swift
+    
+    
+    
     func getClasses() -> Results<theClass> {
         let realm = try? Realm()
         let allclasses = realm?.objects(theClass)

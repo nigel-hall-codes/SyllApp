@@ -1,0 +1,6 @@
+framework module Pods_Syllabus {
+  umbrella header "Pods-Syllabus-umbrella.h"
+
+  export *
+  module * { export * }
+}

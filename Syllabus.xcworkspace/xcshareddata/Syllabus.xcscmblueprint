@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "91E186C5DE8195958DD091D3B43D76B0084D7EF8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "02391A167E848734AB22D302D1481E3E5B7D7D77" : 9223372036854775807,
+    "91E186C5DE8195958DD091D3B43D76B0084D7EF8" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8096722A-DB22-4911-B1D5-D4D530068965",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "02391A167E848734AB22D302D1481E3E5B7D7D77" : "..",
+    "91E186C5DE8195958DD091D3B43D76B0084D7EF8" : "SyllApp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Syllabus",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Syllabus.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/polar-castle-78418.herokuapp.com\/",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "02391A167E848734AB22D302D1481E3E5B7D7D77"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:nigel-hall-codes\/SyllApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "91E186C5DE8195958DD091D3B43D76B0084D7EF8"
+    }
+  ]
+}
