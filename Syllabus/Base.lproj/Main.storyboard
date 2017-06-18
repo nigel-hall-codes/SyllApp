@@ -173,31 +173,43 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sn0-l0-IYw">
-                                <rect key="frame" x="160" y="562" width="54" height="30"/>
+                                <rect key="frame" x="287" y="38" width="54" height="30"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
                                     <action selector="cameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibn-T7-CmO"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cA0-Re-Rah">
+                                <rect key="frame" x="0.0" y="476" width="375" height="191"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="cA0-Re-Rah" firstAttribute="trailing" secondItem="D8A-rR-hq4" secondAttribute="trailing" id="0TF-9k-AXE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8RI-2q-2SX" secondAttribute="bottom" constant="580" id="2ip-EX-DTs"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Sn0-l0-IYw" secondAttribute="bottom" constant="75" id="GhY-3L-Mbe"/>
+                            <constraint firstItem="cA0-Re-Rah" firstAttribute="leading" secondItem="D8A-rR-hq4" secondAttribute="leading" id="DeA-lH-aK2"/>
+                            <constraint firstItem="cA0-Re-Rah" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Eyq-Jz-FoG"/>
+                            <constraint firstItem="Sn0-l0-IYw" firstAttribute="baseline" secondItem="IEP-vk-KRf" secondAttribute="baseline" id="JKH-cv-ab3"/>
                             <constraint firstItem="D8A-rR-hq4" firstAttribute="top" secondItem="15f-O3-8Iy" secondAttribute="bottom" constant="62" id="Khl-0w-2Ai"/>
                             <constraint firstItem="D8A-rR-hq4" firstAttribute="centerX" secondItem="15f-O3-8Iy" secondAttribute="centerX" id="OxR-k4-1tt"/>
                             <constraint firstItem="8RI-2q-2SX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="T1u-W5-HtG"/>
                             <constraint firstItem="8RI-2q-2SX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="19" id="Txm-2P-ISI"/>
-                            <constraint firstItem="Sn0-l0-IYw" firstAttribute="centerX" secondItem="D8A-rR-hq4" secondAttribute="centerX" id="VOs-hx-mZL"/>
+                            <constraint firstItem="cA0-Re-Rah" firstAttribute="top" secondItem="D8A-rR-hq4" secondAttribute="bottom" constant="15" id="ZPY-oO-pOD"/>
                             <constraint firstItem="IEP-vk-KRf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aKV-7x-7Vi"/>
                             <constraint firstItem="IEP-vk-KRf" firstAttribute="centerY" secondItem="8RI-2q-2SX" secondAttribute="centerY" id="diC-ww-65i"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="D8A-rR-hq4" secondAttribute="bottom" constant="206" id="g3t-oL-FDH"/>
                             <constraint firstItem="D8A-rR-hq4" firstAttribute="leading" secondItem="8RI-2q-2SX" secondAttribute="leading" id="jHC-fZ-36C"/>
                             <constraint firstItem="D8A-rR-hq4" firstAttribute="trailing" secondItem="8RI-2q-2SX" secondAttribute="trailing" id="jbz-5K-Mq2"/>
                             <constraint firstAttribute="trailing" secondItem="8RI-2q-2SX" secondAttribute="trailing" id="uej-j6-eLo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sn0-l0-IYw" secondAttribute="trailing" constant="18" id="xeE-Xz-eLF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="SyllabusTextView" destination="cA0-Re-Rah" id="RDl-hh-Lkp"/>
                         <outlet property="UpcomingTableView" destination="D8A-rR-hq4" id="Ucj-jj-NaL"/>
                         <outlet property="classLabel" destination="8RI-2q-2SX" id="W1f-GD-R5B"/>
                     </connections>

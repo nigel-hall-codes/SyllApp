@@ -17,6 +17,9 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var UpcomingTableView: UITableView!
     
+    
+    @IBOutlet weak var SyllabusTextView: UITextView!
+    
     @IBOutlet weak var classLabel: UILabel!
     var className: String = "Default"
     
@@ -59,6 +62,8 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             tesseract.image = image.g8_blackAndWhite()
             tesseract.recognize()
             print(tesseract.recognizedText)
+            SyllabusTextView.text = tesseract.recognizedText
+            
             
             
         }
